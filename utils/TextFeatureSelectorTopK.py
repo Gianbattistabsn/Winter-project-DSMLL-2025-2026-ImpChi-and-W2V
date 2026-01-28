@@ -1,13 +1,12 @@
 import pandas as pd
 import numpy as np
-from pyparsing import col
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import chi2
 
 class TextFeatureSelectorTransformer:
      """
-     Applica TF-IDF e selezione feature (Chi2) in modo distinto per Titolo e Articolo.
-     Permette di specificare K diversi per le due sorgenti.
+     Applies TF-IDF and feature selection (Chi2) separately for Title and Article.
+     Allows you to specify different K for the two sources.
      """
      
      def __init__(self, 
@@ -65,7 +64,7 @@ class TextFeatureSelectorTransformer:
                n_features = X_tfidf.shape[1]
                k_safe = min(k, n_features)
 
-               if (label == 2 and name == 'ARTICLE') or ():
+               if (label == 2 and name == 'ARTICLE'):
                     k_safe = min(k * 3, n_features)
                     print(f"[{name}] increasing k to {k_safe}.")
                elif label == 0 and name == 'ARTICLE':
