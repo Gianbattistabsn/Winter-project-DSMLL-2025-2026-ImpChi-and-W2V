@@ -44,4 +44,3 @@ Make sure the expected files and subfolders are available before running the pro
 
 GitHub repository:  
 👉 https://github.com/Gianbattistabsn/Winter-project-DSMLL-2025-2026-ImpChi-and-W2V
-
